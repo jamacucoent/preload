@@ -38,16 +38,18 @@ overlay.appendChild(svgImage);
 // Append the overlay to the body
 document.body.appendChild(overlay);
 
-// Function to hide the overlay and display the SVG
+// Function to hide the overlay
 function hideOverlay() {
     overlay.style.display = 'none';
 }
 
 // Add an event listener to hide the overlay when all external JS files are loaded
 document.addEventListener('DOMContentLoaded', () => {
-    setTimeout(hideOverlay, 3000); // Simulate a delay for demonstration purposes
+    // Simulate a delay for demonstration purposes
+    // This timeout represents the time you assume your external resources take to load
+    setTimeout(hideOverlay, 3000);
 });
 
-// Fallback: If all external resources are loaded and the DOMContentLoaded event doesn't fire,
+// Fallback: If the DOMContentLoaded event doesn't fire or is not enough,
 // we'll still hide the overlay when the window's load event is triggered.
 window.addEventListener('load', hideOverlay);
