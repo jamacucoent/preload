@@ -3,6 +3,7 @@ const overlay = document.createElement('div');
 overlay.id = 'loader';
 overlay.style.cssText = `
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     position: fixed;
@@ -14,35 +15,37 @@ overlay.style.cssText = `
     z-index: 999;
 `;
 
+const firebaseImage = document.createElement('img');
+firebaseImage.src = https://firebasestorage.googleapis.com/v0/b/fliktrip-ff.appspot.com/o/Destinations%20Photos%2Ffliktrip2.png?alt=media&token=bf6a1015-e6fb-4a50-a56a-82369639887f;  // Replace with your actual Firebase image URL
+firebaseImage.style.cssText = `
+    max-width: 50%;
+    max-height: 30%;
+    margin-bottom: 20px;
+`;
+
 const svgImage = document.createElement('img');
 svgImage.id = 'svgImage';
 svgImage.src = 'https://cdn.jsdelivr.net/gh/jasminder/flutter_preloader/preload.svg';
 svgImage.style.cssText = `
-    max-width: 100%;
-    max-height: 100%;
-    display: none;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    max-width: 100px;  // Adjust size as necessary
+    max-height: 100px; // Adjust size as necessary
 `;
-svgImage.style.display = 'none';
 
-// Append the elements to the body
+// Append the image and SVG to the overlay
+overlay.appendChild(firebaseImage);
+overlay.appendChild(svgImage);
+
+// Append the overlay to the body
 document.body.appendChild(overlay);
-document.body.appendChild(svgImage);
 
 // Function to hide the overlay and display the SVG
 function hideOverlay() {
     overlay.style.display = 'none';
-    svgImage.style.display = 'block';
 }
 
 // Add an event listener to hide the overlay when all external JS files are loaded
 document.addEventListener('DOMContentLoaded', () => {
-    // Replace the following lines with the actual code that loads your external JS files
-    // For demonstration purposes, we'll use a setTimeout to simulate loading external JS files.
-    setTimeout(hideOverlay, 100); // Replace with your actual loading code.
+    setTimeout(hideOverlay, 3000); // Simulate a delay for demonstration purposes
 });
 
 // Fallback: If all external resources are loaded and the DOMContentLoaded event doesn't fire,
