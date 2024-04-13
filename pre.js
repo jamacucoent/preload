@@ -47,7 +47,7 @@ function hideOverlay() {
 document.addEventListener('DOMContentLoaded', () => {
     // Simulate a delay for demonstration purposes
     // This timeout represents the time you assume your external resources take to load
-    setTimeout(hideOverlay, 3000);
+    setTimeout(hideOverlay, 100);
 });
 
 // Fallback: If the DOMContentLoaded event doesn't fire or is not enough,
