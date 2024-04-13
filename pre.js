@@ -16,10 +16,10 @@ overlay.style.cssText = `
 `;
 
 const firebaseImage = document.createElement('img');
-firebaseImage.src = https://firebasestorage.googleapis.com/v0/b/fliktrip-ff.appspot.com/o/Destinations%20Photos%2Ffliktrip2.png?alt=media&token=bf6a1015-e6fb-4a50-a56a-82369639887f;  // Replace with your actual Firebase image URL
+firebaseImage.src = 'https://firebasestorage.googleapis.com/v0/b/fliktrip-ff.appspot.com/o/Destinations%20Photos%2Ffliktrip2.png?alt=media&token=bf6a1015-e6fb-4a50-a56a-82369639887f';  // Corrected with quotes around URL
 firebaseImage.style.cssText = `
-    max-width: 100%;
-    max-height: 100%;
+    max-width: 50%;  // Adjusted for better visibility
+    max-height: 30%; // Adjusted for better visibility
     margin-bottom: 20px;
 `;
 
