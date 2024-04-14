@@ -36,7 +36,7 @@ const animation = bodymovin.loadAnimation({
     renderer: 'svg',
     loop: true,
     autoplay: true,
-    path: 'https://lottie.host/fd290a9e-0f8b-46d5-be18-66e5d908f8e3/vqPkNStljE.json' // Replace with your Lottie animation JSON URL
+    path: 'https://lottie.host/383da0ee-230f-421b-96c1-0b4b9fff435a/9qkzOW2Pfl.json' // Replace with your Lottie animation JSON URL
 });
 
 // Function to hide the overlay and display the Lottie animation
