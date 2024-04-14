@@ -17,8 +17,8 @@ overlay.style.cssText = `
 const lottieContainer = document.createElement('div');
 lottieContainer.id = 'lottieContainer';
 lottieContainer.style.cssText = `
-    max-width: 30%;
-    max-height: 30%;
+    max-width: 40%;
+    max-height: 40%;
     display: none;
     position: absolute;
     top: 50%;
@@ -36,7 +36,7 @@ const animation = bodymovin.loadAnimation({
     renderer: 'svg',
     loop: true,
     autoplay: true,
-    path: 'https://lottie.host/d52449fd-1c1e-4f81-94d6-5fba7b16d240/G0CEZfQgcE.json' // Replace with your Lottie animation JSON URL
+    path: 'https://lottie.host/fd290a9e-0f8b-46d5-be18-66e5d908f8e3/vqPkNStljE.json' // Replace with your Lottie animation JSON URL
 });
 
 // Function to hide the overlay and display the Lottie animation
