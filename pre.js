@@ -16,7 +16,7 @@ overlay.style.cssText = `
 
 const svgImage = document.createElement('img');
 svgImage.id = 'svgImage';
-svgImage.src = 'https://cdn.jsdelivr.net/gh/jasminder/flutter_preloader/preload.svg';
+svgImage.src = 'https://firebasestorage.googleapis.com/v0/b/fliktrip-ff.appspot.com/o/spinning-dots.svg?alt=media&token=482eb60a-61f4-4690-bb39-8b933f568400';
 svgImage.style.cssText = `
     max-width: 100%;
     max-height: 100%;
