@@ -57,4 +57,4 @@ window.addEventListener('load', hideOverlay);
 
 // For demonstration purposes, we'll use a setTimeout to simulate loading external resources.
 
-setTimeout(hideOverlay, 100); // Replace with your actual loading code.
+setTimeout(hideOverlay, 2000); // Replace with your actual loading code.
