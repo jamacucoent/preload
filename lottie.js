@@ -1,7 +1,7 @@
 const overlay = document.createElement('div');
 overlay.id = 'loader';
 overlay.style.cssText = `
-    display: flex;
+    display: none; /* Ocultar inicialmente */
     justify-content: center;
     align-items: center;
     position: fixed;
@@ -9,8 +9,7 @@ overlay.style.cssText = `
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(232, 243, 246, 0.976);
-    z-index: 999;
+    z-index: 999; /* Mantener el z-index para que esté por encima de otros elementos */
 `;
 
 const lottieContainer = document.createElement('div');
@@ -29,11 +28,9 @@ document.body.appendChild(overlay);
 document.body.appendChild(lottieContainer);
 
 function hideOverlay() {
-    overlay.style.display = 'none';
-    lottieContainer.style.display = 'block';
-}
+    lottieContainer.style.display = 'block'; // Mostrar el contenedor de la animación
+    overlay.style.display = 'flex'; // Mostrar el overlay sin fondo
 
-window.addEventListener('load', () => {
     const animation = bodymovin.loadAnimation({
         container: lottieContainer,
         renderer: 'svg',
@@ -41,6 +38,8 @@ window.addEventListener('load', () => {
         autoplay: true,
         path: 'https://lottie.host/a0c44c21-740e-4188-bd5d-78412ef65f70/vCs4Xc7JYs.json'
     });
+}
 
+window.addEventListener('load', () => {
     setTimeout(hideOverlay, 100);
 });
